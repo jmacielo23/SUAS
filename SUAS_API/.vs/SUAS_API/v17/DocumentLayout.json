@@ -1,0 +1,291 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Codes\\RhinoBill\\SourceCode\\SUAS_API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{91E55DBC-50C4-437A-BF8B-A88CDC4470C3}|SUAS_API.csproj|d:\\codes\\rhinobill\\sourcecode\\suas_api\\handlers\\deletestudenthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91E55DBC-50C4-437A-BF8B-A88CDC4470C3}|SUAS_API.csproj|solutionrelative:handlers\\deletestudenthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91E55DBC-50C4-437A-BF8B-A88CDC4470C3}|SUAS_API.csproj|d:\\codes\\rhinobill\\sourcecode\\suas_api\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91E55DBC-50C4-437A-BF8B-A88CDC4470C3}|SUAS_API.csproj|solutionrelative:controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91E55DBC-50C4-437A-BF8B-A88CDC4470C3}|SUAS_API.csproj|d:\\codes\\rhinobill\\sourcecode\\suas_api\\responses\\deletestudentresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91E55DBC-50C4-437A-BF8B-A88CDC4470C3}|SUAS_API.csproj|solutionrelative:responses\\deletestudentresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91E55DBC-50C4-437A-BF8B-A88CDC4470C3}|SUAS_API.csproj|d:\\codes\\rhinobill\\sourcecode\\suas_api\\handlers\\getstudenthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91E55DBC-50C4-437A-BF8B-A88CDC4470C3}|SUAS_API.csproj|solutionrelative:handlers\\getstudenthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91E55DBC-50C4-437A-BF8B-A88CDC4470C3}|SUAS_API.csproj|d:\\codes\\rhinobill\\sourcecode\\suas_api\\handlers\\poststudenthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91E55DBC-50C4-437A-BF8B-A88CDC4470C3}|SUAS_API.csproj|solutionrelative:handlers\\poststudenthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91E55DBC-50C4-437A-BF8B-A88CDC4470C3}|SUAS_API.csproj|d:\\codes\\rhinobill\\sourcecode\\suas_api\\commands\\deletestudentrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91E55DBC-50C4-437A-BF8B-A88CDC4470C3}|SUAS_API.csproj|solutionrelative:commands\\deletestudentrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91E55DBC-50C4-437A-BF8B-A88CDC4470C3}|SUAS_API.csproj|d:\\codes\\rhinobill\\sourcecode\\suas_api\\commands\\poststudentrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91E55DBC-50C4-437A-BF8B-A88CDC4470C3}|SUAS_API.csproj|solutionrelative:commands\\poststudentrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91E55DBC-50C4-437A-BF8B-A88CDC4470C3}|SUAS_API.csproj|d:\\codes\\rhinobill\\sourcecode\\suas_api\\responses\\poststudentresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91E55DBC-50C4-437A-BF8B-A88CDC4470C3}|SUAS_API.csproj|solutionrelative:responses\\poststudentresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91E55DBC-50C4-437A-BF8B-A88CDC4470C3}|SUAS_API.csproj|d:\\codes\\rhinobill\\sourcecode\\suas_api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{91E55DBC-50C4-437A-BF8B-A88CDC4470C3}|SUAS_API.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91E55DBC-50C4-437A-BF8B-A88CDC4470C3}|SUAS_API.csproj|d:\\codes\\rhinobill\\sourcecode\\suas_api\\models\\students.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91E55DBC-50C4-437A-BF8B-A88CDC4470C3}|SUAS_API.csproj|solutionrelative:models\\students.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91E55DBC-50C4-437A-BF8B-A88CDC4470C3}|SUAS_API.csproj|d:\\codes\\rhinobill\\sourcecode\\suas_api\\handlers\\getallstudentshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91E55DBC-50C4-437A-BF8B-A88CDC4470C3}|SUAS_API.csproj|solutionrelative:handlers\\getallstudentshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91E55DBC-50C4-437A-BF8B-A88CDC4470C3}|SUAS_API.csproj|d:\\codes\\rhinobill\\sourcecode\\suas_api\\queries\\getstudentquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91E55DBC-50C4-437A-BF8B-A88CDC4470C3}|SUAS_API.csproj|solutionrelative:queries\\getstudentquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91E55DBC-50C4-437A-BF8B-A88CDC4470C3}|SUAS_API.csproj|d:\\codes\\rhinobill\\sourcecode\\suas_api\\queries\\getallstudentsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91E55DBC-50C4-437A-BF8B-A88CDC4470C3}|SUAS_API.csproj|solutionrelative:queries\\getallstudentsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91E55DBC-50C4-437A-BF8B-A88CDC4470C3}|SUAS_API.csproj|d:\\codes\\rhinobill\\sourcecode\\suas_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91E55DBC-50C4-437A-BF8B-A88CDC4470C3}|SUAS_API.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91E55DBC-50C4-437A-BF8B-A88CDC4470C3}|SUAS_API.csproj|d:\\codes\\rhinobill\\sourcecode\\suas_api\\data\\studentsdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91E55DBC-50C4-437A-BF8B-A88CDC4470C3}|SUAS_API.csproj|solutionrelative:data\\studentsdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91E55DBC-50C4-437A-BF8B-A88CDC4470C3}|SUAS_API.csproj|d:\\codes\\rhinobill\\sourcecode\\suas_api\\suas_api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{91E55DBC-50C4-437A-BF8B-A88CDC4470C3}|SUAS_API.csproj|solutionrelative:suas_api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DeleteStudentHandler.cs",
+              "DocumentMoniker": "D:\\Codes\\RhinoBill\\SourceCode\\SUAS_API\\Handlers\\DeleteStudentHandler.cs",
+              "RelativeDocumentMoniker": "Handlers\\DeleteStudentHandler.cs",
+              "ToolTip": "D:\\Codes\\RhinoBill\\SourceCode\\SUAS_API\\Handlers\\DeleteStudentHandler.cs",
+              "RelativeToolTip": "Handlers\\DeleteStudentHandler.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAArwAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-17T06:44:53.154Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DeleteStudentRequest.cs",
+              "DocumentMoniker": "D:\\Codes\\RhinoBill\\SourceCode\\SUAS_API\\Commands\\DeleteStudentRequest.cs",
+              "RelativeDocumentMoniker": "Commands\\DeleteStudentRequest.cs",
+              "ToolTip": "D:\\Codes\\RhinoBill\\SourceCode\\SUAS_API\\Commands\\DeleteStudentRequest.cs",
+              "RelativeToolTip": "Commands\\DeleteStudentRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-17T06:43:45.569Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DeleteStudentResponse.cs",
+              "DocumentMoniker": "D:\\Codes\\RhinoBill\\SourceCode\\SUAS_API\\Responses\\DeleteStudentResponse.cs",
+              "RelativeDocumentMoniker": "Responses\\DeleteStudentResponse.cs",
+              "ToolTip": "D:\\Codes\\RhinoBill\\SourceCode\\SUAS_API\\Responses\\DeleteStudentResponse.cs",
+              "RelativeToolTip": "Responses\\DeleteStudentResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAUAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-17T06:42:41.655Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PostStudentHandler.cs",
+              "DocumentMoniker": "D:\\Codes\\RhinoBill\\SourceCode\\SUAS_API\\Handlers\\PostStudentHandler.cs",
+              "RelativeDocumentMoniker": "Handlers\\PostStudentHandler.cs",
+              "ToolTip": "D:\\Codes\\RhinoBill\\SourceCode\\SUAS_API\\Handlers\\PostStudentHandler.cs",
+              "RelativeToolTip": "Handlers\\PostStudentHandler.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAArwAsAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-17T05:45:18.519Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GetStudentHandler.cs",
+              "DocumentMoniker": "D:\\Codes\\RhinoBill\\SourceCode\\SUAS_API\\Handlers\\GetStudentHandler.cs",
+              "RelativeDocumentMoniker": "Handlers\\GetStudentHandler.cs",
+              "ToolTip": "D:\\Codes\\RhinoBill\\SourceCode\\SUAS_API\\Handlers\\GetStudentHandler.cs",
+              "RelativeToolTip": "Handlers\\GetStudentHandler.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAUwBMAAABRAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-17T05:20:52.479Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StudentsController.cs",
+              "DocumentMoniker": "D:\\Codes\\RhinoBill\\SourceCode\\SUAS_API\\Controllers\\StudentsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\StudentsController.cs",
+              "ToolTip": "D:\\Codes\\RhinoBill\\SourceCode\\SUAS_API\\Controllers\\StudentsController.cs",
+              "RelativeToolTip": "Controllers\\StudentsController.cs",
+              "ViewState": "AQIAAF0AAAAAAAAAAAAhwGYAAABSAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-16T16:25:46.055Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PostStudentResponse.cs",
+              "DocumentMoniker": "D:\\Codes\\RhinoBill\\SourceCode\\SUAS_API\\Responses\\PostStudentResponse.cs",
+              "RelativeDocumentMoniker": "Responses\\PostStudentResponse.cs",
+              "ToolTip": "D:\\Codes\\RhinoBill\\SourceCode\\SUAS_API\\Responses\\PostStudentResponse.cs",
+              "RelativeToolTip": "Responses\\PostStudentResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-17T06:03:35.308Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "GetAllStudentsQuery.cs",
+              "DocumentMoniker": "D:\\Codes\\RhinoBill\\SourceCode\\SUAS_API\\Queries\\GetAllStudentsQuery.cs",
+              "RelativeDocumentMoniker": "Queries\\GetAllStudentsQuery.cs",
+              "ToolTip": "D:\\Codes\\RhinoBill\\SourceCode\\SUAS_API\\Queries\\GetAllStudentsQuery.cs",
+              "RelativeToolTip": "Queries\\GetAllStudentsQuery.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-17T03:19:17.238Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Codes\\RhinoBill\\SourceCode\\SUAS_API\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "D:\\Codes\\RhinoBill\\SourceCode\\SUAS_API\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-07-16T16:19:04.34Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PostStudentRequest.cs",
+              "DocumentMoniker": "D:\\Codes\\RhinoBill\\SourceCode\\SUAS_API\\Commands\\PostStudentRequest.cs",
+              "RelativeDocumentMoniker": "Commands\\PostStudentRequest.cs",
+              "ToolTip": "D:\\Codes\\RhinoBill\\SourceCode\\SUAS_API\\Commands\\PostStudentRequest.cs",
+              "RelativeToolTip": "Commands\\PostStudentRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAsAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-17T05:43:42.029Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "GetAllStudentsHandler.cs",
+              "DocumentMoniker": "D:\\Codes\\RhinoBill\\SourceCode\\SUAS_API\\Handlers\\GetAllStudentsHandler.cs",
+              "RelativeDocumentMoniker": "Handlers\\GetAllStudentsHandler.cs",
+              "ToolTip": "D:\\Codes\\RhinoBill\\SourceCode\\SUAS_API\\Handlers\\GetAllStudentsHandler.cs",
+              "RelativeToolTip": "Handlers\\GetAllStudentsHandler.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAoAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-17T03:22:35.721Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "GetStudentQuery.cs",
+              "DocumentMoniker": "D:\\Codes\\RhinoBill\\SourceCode\\SUAS_API\\Queries\\GetStudentQuery.cs",
+              "RelativeDocumentMoniker": "Queries\\GetStudentQuery.cs",
+              "ToolTip": "D:\\Codes\\RhinoBill\\SourceCode\\SUAS_API\\Queries\\GetStudentQuery.cs",
+              "RelativeToolTip": "Queries\\GetStudentQuery.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-17T05:15:04.861Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Students.cs",
+              "DocumentMoniker": "D:\\Codes\\RhinoBill\\SourceCode\\SUAS_API\\Models\\Students.cs",
+              "RelativeDocumentMoniker": "Models\\Students.cs",
+              "ToolTip": "D:\\Codes\\RhinoBill\\SourceCode\\SUAS_API\\Models\\Students.cs",
+              "RelativeToolTip": "Models\\Students.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-16T15:12:10.008Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "StudentsDBContext.cs",
+              "DocumentMoniker": "D:\\Codes\\RhinoBill\\SourceCode\\SUAS_API\\Data\\StudentsDBContext.cs",
+              "RelativeDocumentMoniker": "Data\\StudentsDBContext.cs",
+              "ToolTip": "D:\\Codes\\RhinoBill\\SourceCode\\SUAS_API\\Data\\StudentsDBContext.cs",
+              "RelativeToolTip": "Data\\StudentsDBContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-16T15:21:39.508Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Codes\\RhinoBill\\SourceCode\\SUAS_API\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\Codes\\RhinoBill\\SourceCode\\SUAS_API\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-16T14:52:42.125Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "SUAS_API.csproj",
+              "DocumentMoniker": "D:\\Codes\\RhinoBill\\SourceCode\\SUAS_API\\SUAS_API.csproj",
+              "RelativeDocumentMoniker": "SUAS_API.csproj",
+              "ToolTip": "D:\\Codes\\RhinoBill\\SourceCode\\SUAS_API\\SUAS_API.csproj",
+              "RelativeToolTip": "SUAS_API.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-07-16T15:19:48.285Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

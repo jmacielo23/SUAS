@@ -10,9 +10,9 @@ namespace SUAS_API.Handlers
 {
     public class PostStudentHandler:IRequestHandler<PostStudentRequest,PostStudentResponse>
     {
-        private readonly StudentsDBContext _dbContext;
+        private readonly AppDBContext _dbContext;
 
-        public PostStudentHandler(StudentsDBContext StudentDbContext)
+        public PostStudentHandler(AppDBContext StudentDbContext)
         {
             _dbContext = StudentDbContext;
         }

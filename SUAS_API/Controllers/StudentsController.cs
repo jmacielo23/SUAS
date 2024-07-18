@@ -17,10 +17,10 @@ namespace SUAS_API.Controllers
     [ApiController]
     public class StudentsController : ControllerBase
     {
-        private readonly StudentsDBContext _context;
+        private readonly AppDBContext _context;
         private readonly IMediator _mediator;
 
-        public StudentsController(StudentsDBContext context, IMediator mediator)
+        public StudentsController(AppDBContext context, IMediator mediator)
         {
             _context = context;
             _mediator = mediator;

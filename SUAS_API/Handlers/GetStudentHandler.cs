@@ -8,9 +8,9 @@ namespace SUAS_API.Handlers
 {
     public class GetStudentHandler : IRequestHandler<GetStudentQuery, Student>
     {
-        private readonly StudentsDBContext _dbContext;
+        private readonly AppDBContext _dbContext;
 
-        public GetStudentHandler(StudentsDBContext StudentDbContext)
+        public GetStudentHandler(AppDBContext StudentDbContext)
         {
             _dbContext = StudentDbContext;
         }

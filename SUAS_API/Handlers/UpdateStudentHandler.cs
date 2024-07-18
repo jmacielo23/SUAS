@@ -10,9 +10,9 @@ namespace SUAS_API.Handlers
 {
     public class UpdateStudentHandler : IRequestHandler<UpdateStudentRequest, UpdateStudentResponse>
     {
-        private readonly StudentsDBContext _dbContext;
+        private readonly AppDBContext _dbContext;
 
-        public UpdateStudentHandler(StudentsDBContext StudentDbContext)
+        public UpdateStudentHandler(AppDBContext StudentDbContext)
         {
             _dbContext = StudentDbContext;
         }
@@ -20,21 +20,25 @@ namespace SUAS_API.Handlers
         {
             UpdateStudentResponse response = new UpdateStudentResponse();
 
-            var existingStudent = await _dbContext.Students.FindAsync(request.StudentData.ID);
-
-            if (existingStudent == null)
-            {
-                response.Success = false;
-                response.Message = "Student not found.";
-                response.ResponseCode = 404;
-                return response;
-            }
-
-            _dbContext.Entry(request.StudentData).State = EntityState.Modified;
-
             try
             {
-                await _dbContext.SaveChangesAsync();
+                var existingStudent = await _dbContext.Students.FindAsync(request.StudentData.ID);
+
+                if (existingStudent == null)
+                {
+                    response.Success = false;
+                    response.Message = "Student not found.";
+                    response.ResponseCode = 404;
+                    return response;
+                }
+
+                existingStudent.FirstName = request.StudentData.FirstName;
+                existingStudent.LastName = request.StudentData.LastName;
+                existingStudent.PhoneNumber = request.StudentData.PhoneNumber;
+                existingStudent.Email = request.StudentData.Email;
+                existingStudent.DateOfBirth = request.StudentData.DateOfBirth;
+
+                await _dbContext.SaveChangesAsync();    
                 response.Success = true;
                 response.Message = "Saved Successfully";
                 response.UpdatedStudentInfo = await _dbContext.Students.FindAsync(request.StudentData.ID);
@@ -43,7 +47,7 @@ namespace SUAS_API.Handlers
             }
             catch (Exception ex)
             {
-                var errorReferenceNumber = Utility.LogTheError(ex);                
+                var errorReferenceNumber = Utility.LogTheError(ex);
                 response.Success = false;
                 response.Message = $"Unable to save the changes. Error Reference: {errorReferenceNumber}";
                 response.ResponseCode = 500;

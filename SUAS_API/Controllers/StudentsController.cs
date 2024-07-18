@@ -46,33 +46,21 @@ namespace SUAS_API.Controllers
 
         // PUT: api/Students/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutStudent(int id, Student student)
+        [HttpPut]
+        public async Task<IActionResult> PutStudent(Student student)
         {
-            if (id != student.ID)
-            {
-                return BadRequest();
-            }
+            var query = new UpdateStudentRequest(student);
+            var response = await _mediator.Send(query);
 
-            _context.Entry(student).State = EntityState.Modified;
-
-            try
+            switch (response.ResponseCode)
             {
-                await _context.SaveChangesAsync();
+                case 404:
+                    return NotFound(response.Message);
+                case 200:
+                    return Ok(response);
+                default:
+                    return BadRequest(response.Message);
             }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!StudentExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
         }
 
         // POST: api/Students
@@ -100,12 +88,7 @@ namespace SUAS_API.Controllers
             var command = new DeleteStudentRequest(id);
             var result = await _mediator.Send(command);
 
-            return result.Success? Ok(result.Message): BadRequest(result.Message);
-        }
-
-        private bool StudentExists(int id)
-        {
-            return _context.Students.Any(e => e.ID == id);
+            return result.Success ? Ok(result.Message) : BadRequest(result.Message);
         }
     }
 }

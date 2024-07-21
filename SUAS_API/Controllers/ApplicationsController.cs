@@ -7,6 +7,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SUAS_API.Data;
 using SUAS_API.Models;
+using MediatR;
+using SUAS_API.Queries;
+using Microsoft.AspNetCore.ResponseCompression;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 
 namespace SUAS_API.Controllers
 {
@@ -15,31 +19,29 @@ namespace SUAS_API.Controllers
     public class ApplicationsController : ControllerBase
     {
         private readonly AppDBContext _context;
+        private readonly IMediator _mediator;
 
-        public ApplicationsController(AppDBContext context)
+        public ApplicationsController(AppDBContext context, IMediator mediator)
         {
             _context = context;
+            _mediator = mediator;
         }
 
         // GET: api/Applications
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Application>>> GetApplication()
         {
-            return await _context.Application.ToListAsync();
+            var query = new GetAllApplicationsQuery();
+            return Ok(await _mediator.Send(query));
         }
 
         // GET: api/Applications/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Application>> GetApplication(int id)
         {
-            var application = await _context.Application.FindAsync(id);
-
-            if (application == null)
-            {
-                return NotFound();
-            }
-
-            return application;
+            var query = new GetApplicationQuery(id);
+            var response = await _mediator.Send(query);
+            return response==null?NotFound("Application Not Found"):Ok(response);
         }
 
         // PUT: api/Applications/5

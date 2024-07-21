@@ -84,15 +84,7 @@ namespace SUAS_API.Controllers
         {
             var query = new AddCourseRequest(course);
             var response = await _mediator.Send(query);
-
-            if (response.Success)
-            {
-                return Ok(response.CourseInfo);
-            }
-            else
-            {
-                return BadRequest(response.Message);
-            }
+            return response.Success ? Ok(response.CourseInfo) : BadRequest(response.Message);
         }
 
         // DELETE: api/Courses/5

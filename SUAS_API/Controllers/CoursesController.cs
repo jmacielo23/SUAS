@@ -33,7 +33,7 @@ namespace SUAS_API.Controllers
         {
             var query = new GetAllCoursesQuery();
             var courses = await _mediator.Send(query);
-            return Ok(courses); ()
+            return Ok(courses);
         }
 
         // GET: api/Courses/5

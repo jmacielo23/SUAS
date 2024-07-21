@@ -5,6 +5,7 @@ using SUAS_API.Data;
 using SUAS_API.Helpers;
 using SUAS_API.Models;
 using SUAS_API.Responses;
+using System.Drawing.Text;
 
 namespace SUAS_API.Handlers
 {
@@ -21,11 +22,19 @@ namespace SUAS_API.Handlers
             AddCourseResponse response = new AddCourseResponse();
             try
             {
-                _dbContext.Courses.Add(request.CourseData);
-                await _dbContext.SaveChangesAsync();
-                response.CourseInfo = request.CourseData;
-                response.Success = true;
-                response.Message = "Course Saved.";
+                var existingCourse = await _dbContext.Courses.FindAsync(request.CourseData.ID);
+                if (existingCourse == null)
+                {
+                    _dbContext.Courses.Add(request.CourseData);
+                    await _dbContext.SaveChangesAsync();
+                    response.CourseInfo = request.CourseData;
+                    response.Success = true;
+                    response.Message = "Course Saved.";
+                    return response;
+                }
+                response.Message = "Course is existing.";
+                response.Success = false;
+                response.CourseInfo = null;
                 return response;
             }
             catch (Exception ex)
@@ -37,7 +46,7 @@ namespace SUAS_API.Handlers
                 return response;
             }
 
-            
+
         }
     }
 }

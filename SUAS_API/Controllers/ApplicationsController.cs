@@ -49,33 +49,20 @@ namespace SUAS_API.Controllers
 
         // PUT: api/Applications/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutApplication(int id, Application application)
+        [HttpPut]
+        public async Task<IActionResult> PutApplication(Application application)
         {
-            if (id != application.ID)
+            var query = new UpdateApplicationRequest(application);
+            var response = await _mediator.Send(query);
+            switch (response.ResponseCode)
             {
-                return BadRequest();
+                case 404:
+                    return NotFound(response.Message);
+                case 200:
+                    return Ok(response.ApplicationInfo);
+                default:
+                    return BadRequest(response.Message);
             }
-
-            _context.Entry(application).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!ApplicationExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
         }
 
         // POST: api/Applications

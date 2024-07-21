@@ -11,6 +11,9 @@ using MediatR;
 using SUAS_API.Queries;
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
+using SUAS_API.Commands;
+using System.Net.Http.Headers;
+using SUAS_API.Helpers;
 
 namespace SUAS_API.Controllers
 {
@@ -78,12 +81,11 @@ namespace SUAS_API.Controllers
         // POST: api/Applications
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Application>> PostApplication(Application application)
+        public async Task<ActionResult> PostApplication(Application application)
         {
-            _context.Application.Add(application);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetApplication", new { id = application.ID }, application);
+            var query = new AddApplicationRequest(application);
+            var response = await _mediator.Send(query);
+            return response.Success ? Ok(response.ApplicationInfo) : BadRequest(response.Message);
         }
 
         // DELETE: api/Applications/5

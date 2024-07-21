@@ -1,4 +1,7 @@
-﻿using MediatR;
+﻿using FluentValidation;
+using FluentValidation.AspNetCore;
+using FluentValidation.Results;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using SUAS_API.Commands;
 using SUAS_API.Data;
@@ -62,6 +65,10 @@ namespace SUAS_API.Controllers
         [HttpPost]
         public async Task<ActionResult> PostStudent(Student student)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
             var command = new PostStudentRequest(student);
             var postStudentResponse = await _mediator.Send(command);
 

@@ -5,7 +5,7 @@
         public int ID { get; set; }
         public string Code { get; set; }
         public string Title { get; set; }
-        public string Credits { get; set; }
+        public int Credits { get; set; }
 
     }
 }

@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SUAS_API.Commands;
 using SUAS_API.Data;
+using SUAS_API.Helpers;
 using SUAS_API.Models;
 using SUAS_API.Queries;
 using SUAS_API.Responses;
@@ -98,16 +99,9 @@ namespace SUAS_API.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCourse(int id)
         {
-            var course = await _context.Courses.FindAsync(id);
-            if (course == null)
-            {
-                return NotFound();
-            }
-
-            _context.Courses.Remove(course);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
+            var query = new DeleteCourseRequest(id);
+            var response = await _mediator.Send(query);
+            return response.Success ? Ok(response.Message) : response.Message != null && response.Message.Equals(Constants.RecordNotFound) ? NotFound(response.Message) : BadRequest(response.Message);
         }
 
         private bool CourseExists(int id)

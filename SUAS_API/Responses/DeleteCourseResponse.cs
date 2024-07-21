@@ -1,8 +1,6 @@
-﻿using SUAS_API.Models;
-
-namespace SUAS_API.Responses
+﻿namespace SUAS_API.Responses
 {
-    public class DeleteStudentResponse
+    public class DeleteCourseResponse
     {
         public bool Success { get; set; }
         public string? Message { get; set; }

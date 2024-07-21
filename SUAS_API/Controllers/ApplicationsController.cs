@@ -92,16 +92,9 @@ namespace SUAS_API.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteApplication(int id)
         {
-            var application = await _context.Application.FindAsync(id);
-            if (application == null)
-            {
-                return NotFound();
-            }
-
-            _context.Application.Remove(application);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
+            var query = new DeleteApplicationRequest(id);
+            var response = await _mediator.Send(query);
+            return response.Success ? Ok(response.Message):BadRequest(response.Message);
         }
 
         private bool ApplicationExists(int id)

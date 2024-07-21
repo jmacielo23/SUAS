@@ -19,27 +19,35 @@ namespace SUAS_API.Handlers
         public async Task<DeleteStudentResponse> Handle(DeleteStudentRequest request, CancellationToken cancellationToken)
         {
             DeleteStudentResponse response = new DeleteStudentResponse();
-            //check if the student id is existing in the context
+            
             try
             {
+                //check if the student is linked in an application
+                var application = await _dbContext.Application.AnyAsync(a=>a.StudentID==request.StudentID);
+                if (application)
+                {
+                    response.Success = false;
+                    response.Message = Constants.RecordLinkedInApplication;
+                    return response;
+                }
+                //check if the student id is existing in the context
                 var student = await _dbContext.Students.FindAsync(request.StudentID);
                 if (student == null)
                 {
                     response.Success = false;
-                    response.Message = "Student is not existing"; 
+                    response.Message = Constants.RecordNotFound;
                     return response;
                 }
                 _dbContext.Students.Remove(student);
                 await _dbContext.SaveChangesAsync();
                 response.Success = true;
-                response.Message = "Student Deleted Successfully";
+                response.Message = Constants.RecordDeleted;
                 return response;
             }
             catch (Exception ex)
             {
-                var ErrorReferenceNumber = Utility.LogTheError(ex);
                 response.Success = false;
-                response.Message = $"Unable to delete the record. Error Reference Number: {ErrorReferenceNumber}";
+                response.Message = Utility.GenericErrorMessage(Utility.LogTheError(ex));
                 return response;
             }
 

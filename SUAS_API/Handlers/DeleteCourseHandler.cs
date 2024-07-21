@@ -20,6 +20,16 @@ namespace SUAS_API.Handlers
             DeleteCourseResponse response = new DeleteCourseResponse();
             try
             {
+                //check if the course to be deleted is linked to an application
+                var application = await _dbContext.Application.AnyAsync(a=>a.CourseID == request.CourseId);
+
+                if (application)
+                {
+                    response.Message = Constants.RecordLinkedInApplication;
+                    response.Success = false;
+                    return response;
+                }
+
                 var course = await _dbContext.Courses.FindAsync(request.CourseId);
                 if (course == null)
                 {
@@ -31,14 +41,13 @@ namespace SUAS_API.Handlers
                 await _dbContext.SaveChangesAsync();
 
                 response.Success = true;
-                response.Message = "Successfully deleted the Course";
+                response.Message = Constants.RecordDeleted;
                 return response;
             }
             catch (Exception ex)
             {
-                var errorRefNumber = Utility.LogTheError(ex);
                 response.Success = false;
-                response.Message = $"An Error Occured. Error Reference Number: {errorRefNumber}";
+                response.Message = Utility.GenericErrorMessage(Utility.LogTheError(ex));
                 return response;
             }
         }

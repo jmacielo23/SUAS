@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using MediatR;
-using Microsoft.AspNetCore.Http;
+﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using SUAS_API.Commands;
 using SUAS_API.Data;
 using SUAS_API.Models;
@@ -71,14 +65,7 @@ namespace SUAS_API.Controllers
             var command = new PostStudentRequest(student);
             var postStudentResponse = await _mediator.Send(command);
 
-            if (postStudentResponse.Success)
-            {
-                return CreatedAtAction("GetStudent", new { id = student.ID }, postStudentResponse.StudentInfo);
-            }
-            else
-            {
-                return BadRequest("Failed to Add Student.");
-            }
+            return postStudentResponse.Success? Ok(postStudentResponse.StudentInfo): BadRequest(postStudentResponse.Message);           
         }
 
         // DELETE: api/Students/5

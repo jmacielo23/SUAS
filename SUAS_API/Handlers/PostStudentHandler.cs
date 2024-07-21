@@ -29,9 +29,11 @@ namespace SUAS_API.Handlers
                 {
                     _dbContext.Students.Add(request.Student);
                     await _dbContext.SaveChangesAsync();
+                    response.StudentInfo = request.Student;
                     response.Success = true;
                     response.Message = "Record Saved.";
                 }
+                response.Message = "Student ID is already existing";
                 return response;
             }
             catch (Exception ex)

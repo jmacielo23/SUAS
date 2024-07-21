@@ -48,33 +48,20 @@ namespace SUAS_API.Controllers
 
         // PUT: api/Courses/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutCourse(int id, Course course)
+        [HttpPut]
+        public async Task<IActionResult> PutCourse(Course course)
         {
-            if (id != course.ID)
+            var query = new UpdateCourseRequest(course);
+            var response = await _mediator.Send(query);
+            switch (response.ResponseCode)
             {
-                return BadRequest();
+                case 404:
+                    return NotFound(response.Message);
+                case 200:
+                    return Ok(response.UpdatedCourseInfo);
+                default:
+                    return BadRequest(response.Message);
             }
-
-            _context.Entry(course).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!CourseExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
         }
 
         // POST: api/Courses
@@ -94,11 +81,6 @@ namespace SUAS_API.Controllers
             var query = new DeleteCourseRequest(id);
             var response = await _mediator.Send(query);
             return response.Success ? Ok(response.Message) : response.Message != null && response.Message.Equals(Constants.RecordNotFound) ? NotFound(response.Message) : BadRequest(response.Message);
-        }
-
-        private bool CourseExists(int id)
-        {
-            return _context.Courses.Any(e => e.ID == id);
         }
     }
 }

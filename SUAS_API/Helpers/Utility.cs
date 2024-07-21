@@ -9,5 +9,10 @@
             //simulation of log writing here: Log.WriteError($"{errorReferenceNumber} | exception}
             return errorReferenceNumber.ToString();
         }
+
+        public static string GenericErrorMessage(string ErrorReferenceNumber)
+        { 
+            return $"An Error Occured. Error Reference Number: {ErrorReferenceNumber}";
+        }
     }
 }

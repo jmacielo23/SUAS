@@ -2,6 +2,7 @@
 using FluentValidation.AspNetCore;
 using FluentValidation.Results;
 using MediatR;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using SUAS_API.Commands;
 using SUAS_API.Data;
@@ -12,6 +13,7 @@ namespace SUAS_API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [EnableCors]
     public class StudentsController : ControllerBase
     {
         private readonly AppDBContext _context;

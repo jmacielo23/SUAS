@@ -45,9 +45,13 @@ namespace SUAS_API.Controllers
 
         // PUT: api/Students/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut]
-        public async Task<IActionResult> PutStudent(Student student)
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutStudent(int id, Student student)
         {
+            if(id!=student.ID)
+            {
+                return BadRequest();
+            }
             var query = new UpdateStudentRequest(student);
             var response = await _mediator.Send(query);
 

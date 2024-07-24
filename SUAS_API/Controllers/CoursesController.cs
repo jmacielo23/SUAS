@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using MediatR;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -17,6 +18,7 @@ namespace SUAS_API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [EnableCors]
     public class CoursesController : ControllerBase
     {
         private readonly AppDBContext _context;
@@ -48,9 +50,13 @@ namespace SUAS_API.Controllers
 
         // PUT: api/Courses/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut]
-        public async Task<IActionResult> PutCourse(Course course)
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutCourse(int id, Course course)
         {
+            if (id != course.ID)
+            {
+                return BadRequest();
+            }
             var query = new UpdateCourseRequest(course);
             var response = await _mediator.Send(query);
             switch (response.ResponseCode)

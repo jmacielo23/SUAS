@@ -4,8 +4,9 @@
     "\\src",
     "\\src\\assets",
     "\\src\\layouts",
-    "\\src\\pages"
+    "\\src\\pages",
+    "\\src\\router"
   ],
-  "SelectedNode": "\\src\\pages\\IndexPage.vue",
+  "SelectedNode": "\\src\\layouts\\MainLayout.vue",
   "PreviewInSolutionExplorer": false
 }

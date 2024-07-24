@@ -19,18 +19,17 @@
       </q-toolbar>
     </q-header>
 
-    <q-drawer
-      v-model="leftDrawerOpen"
-      show-if-above
-      bordered
-    >
-    <q-item-label
-          header
-        >
-          Sections
-        </q-item-label>
+    <q-drawer v-model="leftDrawerOpen"
+              show-if-above
+              bordered>
+      <q-item-label header>
+        Sections
+      </q-item-label>
       <q-tabs>
-        <q-route-tab to="/Students" replace label="Students"/>
+        <q-route-tab to="/Students" replace label="Students" />
+      </q-tabs>
+      <q-tabs>
+        <q-route-tab to="/Courses" replace label="Courses" />
       </q-tabs>
     </q-drawer>
 

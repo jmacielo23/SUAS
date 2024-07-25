@@ -25,7 +25,7 @@
         />
       </q-card-section>
       <q-card-actions align="right">
-        <q-btn color="negative" label="Close" @click="showDOBPicker = false" />
+        <q-btn color="positive" label="Select the Date" @click="showDOBPicker = false" />
       </q-card-actions>
     </q-card>
   </q-dialog>
@@ -33,11 +33,11 @@
       <q-card>
       <q-card-section>
         <q-date
-          v-model="newStudent.dateOfBirth" minimal
+          v-model="selectedStudent.dateOfBirth" minimal
         />
       </q-card-section>
       <q-card-actions align="right">
-        <q-btn color="negative" label="Close" @click="showDOBPickerEdit = false" />
+        <q-btn color="positive" label="Select the Date" @click="showDOBPickerEdit = false" />
       </q-card-actions>
     </q-card>
   </q-dialog>
@@ -221,6 +221,7 @@ export default {
   },
   async saveChanges() {
     try {
+      this.formatDateEdit();
       await axios.put(`https://localhost:44319/api/Students/${this.selectedStudent.id}`, this.selectedStudent);
       this.fetchStudents(); // Refresh the student list after editing a student
       this.showEditDialog = false;
@@ -243,6 +244,13 @@ export default {
         this.students = this.students.filter(student => student.id !== id);
       } catch (error) {
         console.error('Error deleting student:', error);
+        if (error.response.data.errors == null) {
+          this.errorMessage = error.response.data;
+        }
+        else {
+          this.errorMessage = error.response.data.errors;
+        }
+        this.errorDialog = true;
       }
     },
     openDOBCalendar(){
@@ -261,12 +269,10 @@ export default {
     },
     formatDate() {
       // Format the date when input is changed
-      console.log('TST');
       this.newStudent.dateOfBirth = this.formatDatePickerValue(this.newStudent.dateOfBirth);
     },
     formatDateEdit() {
       // Format the date when input is changed
-      console.log('TST');
       this.selectedStudent.dateOfBirth = this.formatDatePickerValue(this.selectedStudent.dateOfBirth);
     }
   }

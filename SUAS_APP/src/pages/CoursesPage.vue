@@ -29,6 +29,21 @@
           <q-btn color="positive" label="Ok" @click="confirmDialog = false" />
         </q-card-actions>
       </q-card>
+    </q-dialog><q-dialog v-model="errorDialog">
+      <q-card>
+        <q-card-section class="text-negative">{{ errorMessage }}</q-card-section>
+        <q-card-actions align="right">
+          <q-btn color="negative" label="Close" @click="errorDialog = false" />
+        </q-card-actions>
+      </q-card>
+    </q-dialog>
+    <q-dialog v-model="confirmDialog">
+      <q-card>
+        <q-card-section class="text-negative">{{ confirmMessage }}</q-card-section>
+        <q-card-actions align="right">
+          <q-btn color="positive" label="Ok" @click="confirmDialog = false" />
+        </q-card-actions>
+      </q-card>
     </q-dialog>
     <div class="q-pa-md" style="max-width: 800px">
       <h5> Create Course </h5>
@@ -186,6 +201,13 @@
         }
         catch (error) {
           console.error('Error in Deleting the record', error);
+          if (error.response.data.errors == null) {
+            this.errorMessage = error.response.data;
+          }
+          else {
+            this.errorMessage = error.response.data.errors;
+          }
+          this.errorDialog = true;
         }
       }
     }

@@ -31,6 +31,9 @@
       <q-tabs>
         <q-route-tab to="/Courses" replace label="Courses" />
       </q-tabs>
+      <q-tabs>
+        <q-route-tab to="/Applications" replace label="Applications" />
+      </q-tabs>
     </q-drawer>
 
     <q-page-container>

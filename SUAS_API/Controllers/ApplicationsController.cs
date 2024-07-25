@@ -14,11 +14,13 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 using SUAS_API.Commands;
 using System.Net.Http.Headers;
 using SUAS_API.Helpers;
+using Microsoft.AspNetCore.Cors;
 
 namespace SUAS_API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [EnableCors]
     public class ApplicationsController : ControllerBase
     {
         private readonly AppDBContext _context;
@@ -44,14 +46,18 @@ namespace SUAS_API.Controllers
         {
             var query = new GetApplicationQuery(id);
             var response = await _mediator.Send(query);
-            return response==null?NotFound("Application Not Found"):Ok(response);
+            return response == null ? NotFound("Application Not Found") : Ok(response);
         }
 
         // PUT: api/Applications/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut]
-        public async Task<IActionResult> PutApplication(Application application)
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutApplication(int id, Application application)
         {
+            if (id != application.ID)
+            {
+                return BadRequest();
+            }
             var query = new UpdateApplicationRequest(application);
             var response = await _mediator.Send(query);
             switch (response.ResponseCode)

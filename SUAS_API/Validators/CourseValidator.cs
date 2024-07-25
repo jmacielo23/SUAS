@@ -14,7 +14,7 @@ namespace SUAS_API.Validators
             RuleFor(x=>x.Title)
                 .NotEmpty()
                 .Length(5, 50).WithMessage("Title must be between 5 and 50 characters long.")
-                .Matches(@"^[a-zA-Z0-9]+$").WithMessage("Code must be alphanumeric (letters and numbers only) and cannot contain special characters.");
+                .Matches(@"^[a-zA-Z0-9\s]*[^\s][a-zA-Z0-9\s]*$").WithMessage("Code must be alphanumeric (letters and numbers only) and cannot contain special characters.");
             RuleFor(x => x.Credits).GreaterThan(0);
         }
     }
